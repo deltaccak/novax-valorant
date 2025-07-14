@@ -1,11 +1,10 @@
-// Initialize AOS (Animate On Scroll) Library
+
 AOS.init({
     duration: 1000,
     once: true,
     mirror: false
 });
 
-// Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -14,13 +13,11 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -34,7 +31,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
@@ -44,7 +40,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Active navigation link highlighting
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -71,8 +66,6 @@ function getCurrentSection() {
 }
 
 window.addEventListener('scroll', updateActiveNavLink);
-
-// Particles Animation for Hero Section
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
     const particleCount = 50;
@@ -88,26 +81,19 @@ function createParticles() {
     }
 }
 
-// Initialize particles on page load
 document.addEventListener('DOMContentLoaded', createParticles);
-
-// Rankings Tab Functionality
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
 tabButtons.forEach(button => {
     button.addEventListener('click', () => {
         const targetTab = button.getAttribute('data-tab');
-        
-        // Remove active class from all tabs and contents
         tabButtons.forEach(btn => btn.classList.remove('active'));
         tabContents.forEach(content => content.classList.remove('active'));
         
-        // Add active class to clicked tab and corresponding content
         button.classList.add('active');
         document.getElementById(targetTab).classList.add('active');
         
-        // Animate the tab content
         const activeContent = document.getElementById(targetTab);
         activeContent.style.opacity = '0';
         activeContent.style.transform = 'translateY(20px)';
@@ -119,20 +105,18 @@ tabButtons.forEach(button => {
     });
 });
 
-// Contact Form Functionality
+
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form data
         const formData = new FormData(contactForm);
         const formDataObj = {};
         formData.forEach((value, key) => {
             formDataObj[key] = value;
         });
-        
-        // Simulate form submission
+
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         
@@ -153,7 +137,6 @@ if (contactForm) {
     });
 }
 
-// Tournament Cards Hover Effect
 const tournamentCards = document.querySelectorAll('.tournament-card');
 tournamentCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
@@ -167,7 +150,6 @@ tournamentCards.forEach(card => {
     });
 });
 
-// Community Cards Animation
 const communityCards = document.querySelectorAll('.community-card');
 communityCards.forEach((card, index) => {
     card.addEventListener('mouseenter', () => {
@@ -180,8 +162,6 @@ communityCards.forEach((card, index) => {
         card.style.boxShadow = '0 15px 30px rgba(139, 92, 246, 0.2)';
     });
 });
-
-// Ranking Items Animation
 const rankingItems = document.querySelectorAll('.ranking-item');
 rankingItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
@@ -194,8 +174,6 @@ rankingItems.forEach(item => {
         item.style.boxShadow = '0 5px 15px rgba(139, 92, 246, 0.2)';
     });
 });
-
-// Timeline Items Animation
 const timelineItems = document.querySelectorAll('.timeline-item');
 timelineItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
@@ -211,11 +189,9 @@ timelineItems.forEach(item => {
     });
 });
 
-// Button Click Effects
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
-        // Create ripple effect
         const ripple = document.createElement('span');
         const rect = button.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
@@ -235,7 +211,6 @@ buttons.forEach(button => {
     });
 });
 
-// Add CSS for ripple effect
 const style = document.createElement('style');
 style.textContent = `
     .btn {
@@ -264,7 +239,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Scroll to Top Functionality
 const scrollToTopBtn = document.createElement('button');
 scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 scrollToTopBtn.className = 'scroll-to-top';
@@ -302,7 +276,6 @@ scrollToTopBtn.addEventListener('click', () => {
     });
 });
 
-// Typing Effect for Hero Title
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -318,7 +291,6 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect on page load
 document.addEventListener('DOMContentLoaded', () => {
     const heroTitle = document.querySelector('.hero-title .highlight');
     if (heroTitle) {
@@ -328,11 +300,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Tournament Status Animation
 const activeStatuses = document.querySelectorAll('.tournament-status.active');
 activeStatuses.forEach(status => {
     setInterval(() => {
         status.style.opacity = status.style.opacity === '0.5' ? '1' : '0.5';
     }, 1000);
 });
-
