@@ -481,14 +481,14 @@ background-clip: text;filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));anim
 }
 .tournament-prize {
     font-family: 'Orbitron', monospace;
-    font-size: var(--font-xl);
+    font-size: 30px;
     font-weight: 700;
     color: var(--neon-green);
     text-shadow: 0 0 10px rgba(200, 0, 255, 0.5);
 }
 .tournament-title {
-    font-size: var(--font-2xl);
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 900;
     margin-bottom: var(--spacing-md);
     color: var(--text-primary);
 }
@@ -503,7 +503,7 @@ background-clip: text;filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));anim
     align-items: center;
     gap: var(--spacing-sm);
     color: var(--text-secondary);
-    font-size: var(--font-sm);
+    font-size: 17px;
 }
 .info-item i {
     color: var(--primary-purple);
