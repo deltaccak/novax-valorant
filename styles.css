@@ -253,7 +253,8 @@ body {
     transform: scale(1.05) rotate(2deg);
     filter: drop-shadow(0 0 30px rgba(255, 0, 200, 0.8));
 }
-.hero-title {font-family: 'Orbitron', monospace; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; margin-bottom: var(--spacing-md); animation: fadeInUp 1s ease-out 0.2s both;}
+.hero-title {font-family: 'Orbitron', monospace; font-size: clamp(5rem, 8vw, 4rem); font-weight: 900; margin-bottom: var(--spacing-md); animation: fadeInUp 1s ease-out 0.2s both;}
+
 .highlight {background: linear-gradient(45deg, var(--primary-purple), var(--neon-green));-webkit-background-clip: text;-webkit-text-fill-color: transparent;
 background-clip: text;filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));animation: glow 2s ease-in-out infinite alternate;
 }
@@ -270,6 +271,40 @@ background-clip: text;filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));anim
     color: var(--text-secondary);
     margin-bottom: var(--spacing-lg);
     animation: fadeInUp 1s ease-out 0.4s both;
+}
+/* Nuevo estilo para la imagen de Reyna en la sección Hero */
+.hero-reyna {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 18%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    z-index: 1; /* Asegura que la imagen se vea por encima de otros elementos */
+    pointer-events: none; /* Hace que la imagen no sea interactiva, para que no interfiera con los clics */
+    opacity: 0.5; /* Reduce un poco la opacidad para que se integre mejor con el fondo */
+    filter: drop-shadow(0 0 1rem var(--primary-color-dark)); /* Agrega una sombra para un efecto 3D profesional */
+}
+
+/* Ajustes de responsive para la imagen de Reyna */
+@media (max-width: 1024px) {
+    .hero-reyna {
+        width: 50%;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-reyna {
+        width: 60%;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-reyna {
+        width: 70%;
+        opacity: 0.5;
+    }
 }
 .hero-description {
     font-size: var(--font-lg);
@@ -303,7 +338,7 @@ background-clip: text;filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));anim
     justify-content: center;
     position: relative;
     overflow: hidden;
-    min-width: 150px;
+    min-width: 200px;
 }
 .btn::before {
     content: '';
