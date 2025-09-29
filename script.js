@@ -141,12 +141,12 @@ const tournamentCards = document.querySelectorAll('.tournament-card');
 tournamentCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-10px) scale(1.02)';
-        card.style.boxShadow = '0 20px 40px rgba(139, 92, 246, 0.3)';
+        card.style.boxShadow = '0 20px 40px rgba(246, 92, 92, 0.3)';
     });
     
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0) scale(1)';
-        card.style.boxShadow = '0 15px 30px rgba(139, 92, 246, 0.2)';
+        card.style.boxShadow = '0 15px 30px rgba(246, 92, 92, 0.2)';
     });
 });
 
@@ -154,24 +154,24 @@ const communityCards = document.querySelectorAll('.community-card');
 communityCards.forEach((card, index) => {
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-10px) rotateY(5deg)';
-        card.style.boxShadow = '0 20px 40px rgba(139, 92, 246, 0.3)';
+        card.style.boxShadow = '0 20px 40px rgba(246, 92, 92, 0.3)';
     });
     
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0) rotateY(0deg)';
-        card.style.boxShadow = '0 15px 30px rgba(139, 92, 246, 0.2)';
+        card.style.boxShadow = '0 15px 30px rgba(246, 92, 92, 0.2)';
     });
 });
 const rankingItems = document.querySelectorAll('.ranking-item');
 rankingItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
         item.style.transform = 'translateX(10px) scale(1.02)';
-        item.style.boxShadow = '0 10px 25px rgba(139, 92, 246, 0.3)';
+        item.style.boxShadow = '0 10px 25px rgba(246, 92, 92, 0.3)';
     });
     
     item.addEventListener('mouseleave', () => {
         item.style.transform = 'translateX(0) scale(1)';
-        item.style.boxShadow = '0 5px 15px rgba(139, 92, 246, 0.2)';
+        item.style.boxShadow = '0 5px 15px rgba(246, 92, 92, 0.2)';
     });
 });
 const timelineItems = document.querySelectorAll('.timeline-item');
@@ -179,7 +179,7 @@ timelineItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
         const content = item.querySelector('.timeline-content');
         content.style.transform = 'scale(1.05)';
-        content.style.boxShadow = '0 15px 30px rgba(139, 92, 246, 0.3)';
+        content.style.boxShadow = '0 15px 30px rgba(246, 92, 92, 0.3)';
     });
     
     item.addEventListener('mouseleave', () => {
@@ -256,7 +256,7 @@ scrollToTopBtn.style.cssText = `
     display: none;
     z-index: 1000;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(246, 92, 92, 0.3);
 `;
 
 document.body.appendChild(scrollToTopBtn);
@@ -305,4 +305,62 @@ activeStatuses.forEach(status => {
     setInterval(() => {
         status.style.opacity = status.style.opacity === '0.5' ? '1' : '0.5';
     }, 1000);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // --- AOS (Animate on Scroll) Initialization ---
+    AOS.init({
+        duration: 800, // Animation duration
+        once: true,    // Whether animation should happen only once - while scrolling down
+        offset: 50,    // Offset (in px) from the original trigger point
+    });
+
+    // --- Header Scroll Effect ---
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // --- Mobile Navigation (Hamburger Menu) ---
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    // --- Smooth Scrolling for Anchor Links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
 });

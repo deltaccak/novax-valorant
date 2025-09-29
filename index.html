@@ -3,327 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Únete a la comunidad más competitiva de Valorant en Argentina. Torneos cada 2 semanas, eventos exclusivos y premios en efectivo.">
+    <meta name="description" content="Únete a la comunidad más competitiva de Valorant en Argentina. Torneos, eventos exclusivos y premios.">
     <meta name="keywords" content="Valorant, esports, torneos, gaming, competitivo, Argentina, NovaX">
     <meta name="author" content="NovaX">
-    <title>NovaX - VALORANT</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="icon" href="img/novaxpng.png" type="png">
+    <title>NovaX - Comunidad Competitiva de VALORANT</title>
+
+    <link rel="icon" href="img/novaxpng.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-  <a href="#home" class="logo-link">
-    <img src="img/novaxpng.png" alt="NovaX Logo" class="logo-img">
-    <span class="logo-text">NovaX</span>
-  </a>
-</div>
+  
 
-                
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Inicio</a></li>
-                    <li><a href="#tournaments" class="nav-link">Compite Ya!</a></li>
-                    <li><a href="#events" class="nav-link">Historial</a></li>
-                    <li><a href="#rankings" class="nav-link">Palmarés</a></li>
-                    <li><a href="#community" class="nav-link">Comunidad</a></li>
-                </ul>
-                
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="particles" id="particles"></div>
+    <main>
+<section id="home" class="hero">
+    <div class="hero-content container" data-aos="fade-up">
+        <h1 class="hero-title">
+            
+            <span class="highlight">NOVAX</span>
+        </h1>
+        <p class="hero-description">
+            La comunidad #1 de Valorant competitivo en Argentina. Torneos quincenales, eventos exclusivos y la gloria te esperan.
+        </p>
+        <div class="hero-buttons">
+            <a href="https://discord.gg/wySVmKajgJ" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Únete a Discord</a>
+        </div>
+    </div>
+    
+    <div class="hero-stats container">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <span class="stat-number">240+</span>
+            <span class="stat-label">Jugadores Activos</span>
+        
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="stat-number">6+</span>
+            <br>
+            <span class="stat-label">Torneos Realizados</span>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="stat-number">$190+</span>
+            <br>
+            <span class="stat-label">En Premios</span>
+            
+            
         </div>
         
-        <div class="hero-content">
-            <div class="hero-text" data-aos="fade-up">
-                <h1 class="hero-title">
-                    <span class="highlight">NovaX</span>
-                    <br>
-                    <span class="subtitle">Comunidad Competitiva</span>
-                </h1>
-                
-                <p class="hero-description">
-                    Únete a la comunidad más competitiva de Valorant. Torneos cada 2 semanas, eventos exclusivos y la oportunidad de demostrar tu nivel.
-                </p>
-                
-                <div class="hero-buttons">
-                    <a href="https://discord.gg/wySVmKajgJ" class="btn btn-primary">Únete Ahora</a>
-                </div>
-            </div>
-            <img src="img/reyna.png" alt="Reyna de Valorant" class="hero-reyna">
-        </div>
-        
-        <div class="hero-stats">
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                <span class="stat-number">200+</span>
-                <span class="stat-label">Jugadores</span>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-                <span class="stat-number">5</span>
-                <span class="stat-label">Torneos finalizados</span>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
-                <span class="stat-number">$150</span>
-                <span class="stat-label">en Premios</span>
-            </div>
-        </div>
-    </section>
+    </div>
+    
+</section>
 
-    <!-- Tournaments Section -->
-    <section id="tournaments" class="tournaments">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Torneos Activos</h2>
-            
-            <div class="tournament-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="tournament-header">
-                    <div class="tournament-status upcoming">PRÓXIMO</div>
-                    <div class="tournament-prize">50$</div>
-                </div>
-                
-                <h3 class="tournament-title">ALPHA VS OMEGA</h3>
-                
-                <div class="tournament-info">
-                    <div class="info-item">
-                        <i class="fas fa-calendar"></i>
-                        <span>21/8/2025</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-users"></i>
-                        <span>Modalidad: 5v5</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-trophy"></i>
-                        <span>50 USD al equipo ganador</span>
-                    </div>
-                </div>
-            
-                <a href="https://discord.com/channels/1375604749965197514/1375623748262035519/1397694431930613831" class="btn btn-tournament">Saber más</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Events Section -->
-    <section id="events" class="events">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Historial de Torneos</h2>
-            
-            <div class="events-timeline">
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-date">
-                        <span class="date-day">14</span>
-                        <span class="date-month">JUN</span>
+
+
+        <section id="tournaments" class="tournaments section-padding">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Próximo Torneo</h2>
+                
+                <div class="tournament-card" data-aos="fade-up" data-aos-delay="200">
+                   
+                      <div class="tournament-body">
+                        <div class="tournament-header">
+                            <span class="tournament-status upcoming">Inscripciones Abiertas</span>
+                            <span class="tournament-date"><i class="fas fa-calendar"></i> 21/10/2025</span>
+                        </div>
+                        <h3 class="tournament-title">ALPHA VS OMEGA</h3>
+                        <p class="tournament-description">El desafío definitivo 5v5. Demuestra que tu equipo es el mejor y reclama la victoria.</p>
+                        <div class="tournament-info">
+                            <div class="info-item"><i class="fas fa-users"></i> 5v5 Competitivo</div>
+                            <div class="info-item"><i class="fas fa-trophy"></i> Pozo de $50 USD</div>
+                            <div class="info-item"><i class="fas fa-map"></i> Bracket de Eliminación Simple</div>
+                        </div>
+                        <a href="https://discord.com/channels/1375604749965197514/1397694431930613831" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Más Información</a>
                     </div>
-                    <div class="timeline-content">
-                        <h3>NovaX Tourney 2v2</h3>
-                        <p>Premios: 15 USD para ambos ganadores. </p>
-                        <div class="event-tags">
-                            <span class="tag">30$</span>
-                            <span class="tag">2v2</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="events section-padding">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Historial de Torneos</h2>
+                <div class="events-timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <span class="timeline-date">12 JUL, 2025</span>
+                            <h3>Sheriff Edition 1v1</h3>
+                            <p>Ganador: "21" - Premio: $20 USD</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-date">
-                        <span class="date-day">18</span>
-                        <span class="date-month">JUN</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Classic Duel 1v1</h3>
-                        <p>Premios: 10 USD</p>
-                        <div class="event-tags">
-                            <span class="tag">10$</span>
-                            <span class="tag">BO1</span>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <span class="timeline-date">28 JUN, 2025</span>
+                            <h3>Classic Duel 1v1 #2</h3>
+                            <p>Ganador: "Anubis" - Premio: $20 USD</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-date">
-                        <span class="date-day">28</span>
-                        <span class="date-month">JUN</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Classic Duel 1v1</h3>
-                        <p>Premios: 20 USD, 10 USD, Buddy/Tarjeta/Spray (a elección)</p>
-                        <div class="event-tags">
-                            <span class="tag">20$</span>
-                            <span class="tag">BO1</span>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-content">
+                             <span class="timeline-date">18 JUN, 2025</span>
+                            <h3>Classic Duel 1v1 #1</h3>
+                            <p>Ganador: "Rainnnz" - Premio: $10 USD</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-date">
-                        <span class="date-day">12</span>
-                        <span class="date-month">JUL</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Sheriff Edition 1v1</h3>
-                        <p>Premios: 20 USD</p>
-                        <div class="event-tags">
-                            <span class="tag">20$</span>
-                            <span class="tag">BO1</span>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <span class="timeline-date">14 JUN, 2025</span>
+                            <h3>NovaX Tourney 2v2</h3>
+                            <p>Ganadores: "Anubis" & "CorAy" - Premio: $30 USD</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Rankings Section -->
-    <section id="rankings" class="rankings">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Palmarés de Jugadores</h2>
-            
-            <div class="rankings-tabs">
-                <button class="tab-btn" data-tab="players">Jugadores</button>
-            </div>
-
-            <div class="tab-content" id="players">
+        <section id="rankings" class="rankings section-padding">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Palmarés de Jugadores</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Top jugadores por ganancias en torneos NovaX.</p>
                 <div class="ranking-list">
-                    <div class="ranking-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ranking-item gold" data-aos="fade-up" data-aos-delay="200">
                         <div class="rank-position">1</div>
-                        <div class="rank-info">
-                            <h3>Anubis</h3>
-                            <p>Novax Tourney 2v2 Winner | Classic Duel Champion 1v1</p>
-                        </div>
-                        <div class="rank-stats">
-                            <span class="wins">35$</span>
-                        </div>
+                        <div class="rank-player">Anubis</div>
+                        <div class="rank-achievements">NovaX 2v2 Winner | Classic Duel 1v1 Champion</div>
+                        <div class="rank-winnings">$35</div>
                     </div>
-
-                    <div class="ranking-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="ranking-item silver" data-aos="fade-up" data-aos-delay="300">
                         <div class="rank-position">2</div>
-                        <div class="rank-info">
-                            <h3>Rainnnz</h3>
-                            <p>Classic Duel Champion 1v1</p>
-                        </div>
-                        <div class="rank-stats">
-                            <span class="wins">10$</span>
-                        </div>
+                        <div class="rank-player">21</div>
+                        <div class="rank-achievements">Sheriff Edition 1v1 Winner</div>
+                        <div class="rank-winnings">$20</div>
                     </div>
-
-                    <div class="ranking-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="ranking-item bronze" data-aos="fade-up" data-aos-delay="400">
                         <div class="rank-position">3</div>
-                        <div class="rank-info">
-                            <h3>21</h3>
-                            <p>Sheriff Edition 1v1 Winner</p>
-                        </div>
-                        <div class="rank-stats">
-                            <span class="wins">20$</span>
-                        </div>
+                        <div class="rank-player">CorAy</div>
+                        <div class="rank-achievements">NovaX 2v2 Winner</div>
+                        <div class="rank-winnings">$15</div>
                     </div>
-
-                    <div class="ranking-item" data-aos="fade-up" data-aos-delay="400">
+                     <div class="ranking-item" data-aos="fade-up" data-aos-delay="500">
                         <div class="rank-position">4</div>
-                        <div class="rank-info">
-                            <h3>CorAy</h3>
-                            <p>Novax Tourney 2v2 Winner</p>
-                        </div>
-                        <div class="rank-stats">
-                            <span class="wins">15$</span>
-                        </div>
+                        <div class="rank-player">Rainnnz</div>
+                        <div class="rank-achievements">Classic Duel 1v1 Champion</div>
+                        <div class="rank-winnings">$10</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Community Section -->
-    <section id="community" class="community">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Únete a la Comunidad</h2>
-            
-            <div class="community-grid">
-                <div class="community-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-icon">
-                        <i class="fab fa-discord"></i>
+        <section id="community" class="community section-padding">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Nuestras Redes</h2>
+                <div class="community-grid">
+                    <div class="community-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon"><i class="fab fa-discord"></i></div>
+                        <h3>Discord</h3>
+                        <p>El corazón de NovaX. Conéctate con otros jugadores, busca equipo y participa en torneos.</p>
+                        <a href="https://discord.gg/wySVmKajgJ" target="_blank" rel="noopener noreferrer" class="btn btn-tertiary">Unirse al Servidor</a>
                     </div>
-                    <h3>Discord Server</h3>
-                    <p>Conéctate con más de 180 jugadores, encuentra equipo y participa en torneos diarios.</p>
-                    <a href="https://discord.gg/wySVmKajgJ" target="_blank" class="btn btn-discord">Únete al Discord</a>
-                </div>
-                
-                <div class="community-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-icon">
-                        <i class="fab fa-twitch"></i>
+                    <div class="community-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon"><i class="fab fa-twitch"></i></div>
+                        <h3>Twitch</h3>
+                        <p>No te pierdas ni una jugada. Sigue la transmisión en vivo de todas las finales y eventos especiales.</p>
+                        <a href="https://www.twitch.tv/b4zu_" target="_blank" rel="noopener noreferrer" class="btn btn-tertiary">Seguir Canal</a>
                     </div>
-                    <h3>Twitch</h3>
-                    <p>Mira los torneos en vivo, casting de cada partida y contenido exclusivo.</p>
-                    <a href="https://www.twitch.tv/b4zu_" target="_blank" class="btn btn-twitch">Síguenos en Twitch</a>
-                </div>
-                
-                <div class="community-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-icon">
-                        <i class="fab fa-instagram"></i>
+                    <div class="community-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon"><i class="fab fa-instagram"></i></div>
+                        <h3>Instagram</h3>
+                        <p>Anuncios, mejores jugadas y todo el contenido detrás de escena. ¡Entérate de todo antes que nadie!</p>
+                        <a href="https://www.instagram.com/novax_vl/" target="_blank" rel="noopener noreferrer" class="btn btn-tertiary">Ver Perfil</a>
                     </div>
-                    <h3>Instagram</h3>
-                    <p>Infórmate antes que todos de cuándo realizamos un torneo. Publicamos reels sobre los torneos, y más.</p>
-                    <a href="https://www.instagram.com/novax_vl/" target="_blank" class="btn btn-instagram">Síguenos en Instagram</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>NovaX</h3>
-                    <p>La mejor comunidad competitiva de Valorant en Argentina.</p>
+                <div class="footer-section about">
+                    <a href="#home" class="logo">
+                        <img src="img/novaxpng.png" alt="NovaX Logo" class="logo-img">
+                        <span class="logo-text">NovaX</span>
+                    </a>
+                    <p>Forjando leyendas en la escena competitiva de Valorant.</p>
                     <div class="social-links">
-                        <a href="https://discord.gg/wySVmKajgJ"><i class="fab fa-discord"></i></a>
-                        <a href="https://www.twitch.tv/b4zu_"><i class="fab fa-twitch"></i></a>
-                        <a href="https://www.instagram.com/novax_vl/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discord.gg/wySVmKajgJ" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.twitch.tv/b4zu_" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+                        <a href="https://www.instagram.com/novax_vl/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Competición</h4>
+                <div class="footer-section links">
+                    <h4>Navegación</h4>
                     <ul>
-                        <li><a href="https://discord.com/channels/1375604749965197514/1388664407915106314">Torneos</a></li>
-                        <li><a href="https://discord.com/channels/1375604749965197514/1388713086118137857">Palmarés</a></li>
-                        <li><a href="https://discord.com/channels/1375604749965197514/1375617087673995385">Reglas</a></li>
+                        <li><a href="#tournaments">Torneos</a></li>
+                        <li><a href="#events">Historial</a></li>
+                        <li><a href="#rankings">Ranking</a></li>
+                        <li><a href="#community">Comunidad</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Comunidad</h4>
+                <div class="footer-section links">
+                    <h4>Recursos</h4>
                     <ul>
-                        <li><a href="https://discord.gg/wySVmKajgJ">Discord</a></li>
-                        <li><a href="https://discord.com/channels/1375604749965197514/1375626355030491297">Soporte</a></li>
-                        <li><a href="https://discord.com/channels/1375604749965197514/1391135702158409911">Sugerencias</a></li>
+                        <li><a href="https://discord.com/channels/1375604749965197514/1375617087673995385" target="_blank">Reglamento</a></li>
+                        <li><a href="https://discord.com/channels/1375604749965197514/1375626355030491297" target="_blank">Soporte</a></li>
+                        <li><a href="https://discord.com/channels/1375604749965197514/1391135702158409911" target="_blank">Sugerencias</a></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2025 NovaX — VALORANT. Todos los derechos reservados. Developed by @deltaccak</p>
-                
+                <p>&copy; 2025 NovaX VALORANT. Todos los derechos reservados.</p>
+                <p>by @deltaccak</p>
             </div>
         </div>
-        
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
